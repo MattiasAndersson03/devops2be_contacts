@@ -1,13 +1,17 @@
 import psycopg2, random
 import os
+from dotenv import load_dotenv
+
+# Ladda miljövariabler från .env-fil
+load_dotenv()
 
 conn_details = {
-    "host": "host.docker.internal",
-    "database": "postgres",
-    "user": "postgres",
-    "password": "Mydatabase1391",
-    "port": '5432'
-} 
+    "host": os.getenv("DATABASE_HOST"),
+    "database": os.getenv("DATABASE_NAME"),
+    "user": os.getenv("DATABASE_USER"),
+    "password": os.getenv("DATABASE_PASSWORD"),
+    "port": os.getenv("DATABASE_PORT")
+}
 
 def fetch_user_bookings_from_database(email):
     try:
