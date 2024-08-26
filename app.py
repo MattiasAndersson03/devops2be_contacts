@@ -1,8 +1,8 @@
 from flask import Flask, request, render_template, url_for, session, redirect, jsonify
 import os
 import re
-import psycopg2
-from functions import *
+# import psycopg2
+# from functions import *
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
