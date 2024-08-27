@@ -2,7 +2,7 @@ import psycopg2, random
 import os
 from dotenv import load_dotenv
 
-# Ladda miljövariabler från .env-fil
+# Ladda miljövariabler från .env-file
 load_dotenv()
 
 conn_details = {
