@@ -2,7 +2,7 @@ from flask import Flask, request, render_template, url_for, session, redirect, j
 import os
 import re
 import psycopg2
-from devops2-gitops.functions import *
+from devops2_gitops.functions import *
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
